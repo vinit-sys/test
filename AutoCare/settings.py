@@ -24,7 +24,7 @@ import os
 SECRET_KEY = 'django-insecure-)cp$a(1amp98=jw58i-^m@$k+40r$zmpg6pl6=ad#+09(m4lwz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['test-vinit-resume.herokuapp.com','127.0.0.1']
 
