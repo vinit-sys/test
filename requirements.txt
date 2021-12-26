@@ -13,7 +13,7 @@ Django==3.2.8
 filelock==3.3.2
 gunicorn==20.1.0
 idna==3.3
-importlib==1.0.4
+importlib==1.0
 isort==5.10.1
 jmespath==0.10.0
 joblib==1.1.0
