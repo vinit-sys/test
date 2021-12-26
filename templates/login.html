@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login // Register</title>
+    <link rel="stylesheet" href="{%static 'css/register.css'%}">
+</head>
+<body>
+    <div class="containter-main">
+        <div class="image-text">
+        </div>
+        <div class="login" id="login">
+            <div class="text" style="position:absolute;top:10%;">
+                <h1 style="text-align: center;">Welcome to your destination ...</h1>
+                <h2 style="text-align:center">Enjoy the ride</h2>
+                <h2 style="text-align:center">Have a Good time</h2>
+            </div>
+            <div class="formd">
+                <form action="login" method="POST">
+                    {%csrf_token%}
+                    <label for="user">Username</label><br/>
+                    <input type="text" placeholder="Enter username" name="username" required><br/>
+                    <label for="pass">Password</label><br/>
+                    <input type="password" name="pass1" id="pass1" placeholder="Enter the password" required><br/>
+                    <input type="submit" value="Login">
+    
+                    <a  onclick="getLogin()">Register here</a>
+                </form>
+            </div>
+        </div>
+        <div class="container-inside" id="signup">
+            <div class="text" style="position:absolute;top:10%;">
+                <h1 style="text-align: center;">Welcome to your destination ...</h1>
+            </div>
+            <div class="formd" id="Reg">
+                <form action="register" method="POST">
+                    {% csrf_token%}
+                    <label for="user">Username</label><br/>
+                    <input type="text" placeholder="Enter username" name="username" required><br/>
+                    <label for="email">Email</label><br/>
+                    <input type="email" name="email" placeholder="Enter email" id="email" required><br/>
+                    <label for="pass">Password</label><br/>
+                    <input type="password" name="pass" id="pass" placeholder="Enter the password" required><br/>
+                    <label for="pass2">Re-Enter Password</label><br/>
+                    <input type="password" name="pass2" id="pass2" placeholder="Renter the password" onkeyup="check();" required><br/>
+                    <span id="message"></span><br>
+                    <input type="submit" onclick()="checkpass()"value="Register">
+    
+                    <a onclick="getRegister()">Login here</a>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        var check = function() {
+            if (document.getElementById('pass').value ==document.getElementById('pass2').value) {
+                document.getElementById('message').style.color="blue"
+                document.getElementById('message').innerHTML = "matching";
+            } 
+            else {
+                document.getElementById('message').style.color="red";
+                document.getElementById('message').innerHTML = "not matching";
+            }
+}
+    </script>
+    <script src="{%static 'js/register.js'%}"></script>
+</body>
+</html>

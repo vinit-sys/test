@@ -1,0 +1,131 @@
+.container-main{
+    position:relative;
+}
+.login{
+    font-style: oblique;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position:absolute;
+    width:30%;
+    height:70%;
+    top:20%;
+    right:5%;
+    color:#3ab549;
+    background:#fed501;
+    border-radius: 20% 20% 10% 10%;
+    border: 5px solid #3ab549;
+    display:none;
+}
+.container-inside{
+    font-style: oblique;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#3ab549;
+    background:#fed501;
+    width:30%;
+    height:70%;
+    position:absolute;
+    top:20%;
+    right:5%;
+    border-radius: 20% 20% 10% 10%;
+    border:5px solid #3ab549;
+}
+input{
+    background-color:#3ab549;
+    width:90%;
+    height:25px;
+    color:white;
+    padding:5px;
+    border-radius: 5px;
+    margin:2%;
+    border: none;
+}
+input::placeholder{
+    font-style: oblique;
+    color:white;
+}
+label{
+    margin:2%;
+    font-size: 15px;
+}
+input[type="submit"]{
+    margin-top: 10px;
+    font-style: oblique;
+    width:20%;
+    height:5%;
+    height:25px;
+    border:none;
+    background-color:#3ab549;
+    color:white;
+}
+.formd{
+    position:absolute;
+    width:80%;
+    height:auto;
+    left:10%;
+    bottom:5%;
+}
+.image-text{
+    position: absolute;
+    top:10%;
+    width:50%;
+    height:85%;
+    color:yellow;
+    text-align: center;
+    background-image: url("/static/images/auto.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+@media screen and (max-width:1150px){
+    .container-inside{
+        width:35%;
+    }
+    .login{
+        width:35%;
+    }
+}
+@media screen and (max-width:1050px){
+    .container-inside{
+        width:400px;
+    }
+    .login{
+        width:400px;
+    }
+    .image-text{
+        width:42%;
+    }
+}
+@media screen and (max-width:800px){
+    .container-inside{
+        background-color:white;
+        width:60%;
+        left:20%;
+        right:auto;
+    }
+    .login{
+        background-color:white;
+        width:60%;
+        left:20%;
+        right:auto;
+    }
+    input[type="submit"]{
+        width:100px;
+    }
+    .image-text{
+        width:100%;
+    }
+}
+@media screen and (max-width:500px){
+    .container-inside{
+        width:70%;
+        left:15%;
+        right:auto;
+    }
+    .login{
+        width:70%;
+        left:15%;
+        right:auto;
+    }
+    input[type="submit"]{
+        width:70px;
+    }
+}
