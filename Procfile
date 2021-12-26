@@ -1,1 +1,1 @@
-web: gunicorn Autocare.wsgi --log-file -
+web: gunicorn AutoCare.wsgi --log-file -
