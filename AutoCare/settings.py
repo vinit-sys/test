@@ -9,8 +9,6 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +22,7 @@ import os
 SECRET_KEY = 'django-insecure-)cp$a(1amp98=jw58i-^m@$k+40r$zmpg6pl6=ad#+09(m4lwz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['test-vinit-resume.herokuapp.com','127.0.0.1']
 
