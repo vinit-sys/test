@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <style>
+        .set{
+            position: absolute;
+            top:20%;
+            left:15%;
+            right:15%;
+            width:70%;
+        }
+    label{
+        font-size:20px;
+        font-style: oblique;
+    }
+    input[type="text"]{
+        font-size:15px;
+        width:30%;
+        height:30px;
+        border-radius: 10px;
+        font-style: oblique;
+        border: 5px solid rgb(2, 2, 133);
+    }
+    input[type="file"]{
+        font-size:15px;
+        width:30%;
+        height:auto;
+        border-radius: 10px;;
+        font-style: oblique;
+        border: 5px solid rgb(2, 2, 133);
+    }
+    input[type="submit"],button{
+        color:white;
+        border-radius:10px;
+        width:auto;
+        border: none;
+        height:30px;
+        background-color:rgb(2, 2, 133);
+    }
+    @media screen and (max-width:800px){
+        input[type="file"]{
+            width:90%;
+        }
+        input[type="text"]{
+            width:90%;
+        }
+        .set{
+            top:10%;
+            width:100%;
+        }
+    }
+    @media screen and (max-width:1200px){
+        input[type="file"]{
+            width:60%;
+        }
+        input[type="text"]{
+            width:60%;
+        }
+        .set{
+            width:90%;
+            left:5%;
+            right:5%;
+        }
+        .head{
+            width:60%;
+        }
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="set">
+        <div class="head"style="width:fit-content;background-color: red;color:aliceblue;border-radius: 10px;"><h3>{{message}}</h3></div>
+        <div class="head"style="width:fit-content;background-color: grey;color:aliceblue;border-radius: 10px;"><h2>Leave the boxes empty those you don't want to Change</h2></div>
+        <div class="head"style="width:fit-content;background-color: grey;color:aliceblue;border-radius: 10px;"><h2>If new user please fill all fields</h2></div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {%csrf_token%}
+            <label for="pi">Profile Image</label><br>
+            <input type="file" name="profile_image" id=""><br>
+            <label for="pn">Phone_no</label><br>
+            <input type="text" name="phone_no" id="pn" ><br>
+            <label for="city">City</label><br>
+            <input type="text" name="city" id="city"><br>
+            <label for="country">Country</label><br>
+            <input type="text" name="country" id="country"  ><br>
+            <label for="st">Status</label><br>
+            <input type="text" name="status" id='myText'><br><br>
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+</body>
+</html>
