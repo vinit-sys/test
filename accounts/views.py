@@ -2,9 +2,11 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login
+from django.contrib.auth.decorators import csrf_exempt
 # Create your views here.
 def index(request):
     return render(request,"login.html")
+@csrf_exempt
 def login(request):
     if request.method=="POST":
         username=request.POST.get("username")
