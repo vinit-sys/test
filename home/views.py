@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
 from .models import Profiles
+from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
