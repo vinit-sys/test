@@ -37,13 +37,13 @@
       <div class="card float-start" style="width: 26rem;float:left">
         <img src="{{profile.profile_image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">{{profile.user.username}}</p>
         </div>
       </div>
       <div class="card float-end" style="width: auto;">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Name : User Sample</li>
-          <li class="list-group-item">Phone number : 999999999</li>
+          <li class="list-group-item">Name : {{profile.user.first_name}}</li>
+          <li class="list-group-item">Phone number : {{profile.phone_no}}</li>
           <li class="list-group-item">Address : {{profile.Address}}</li>
           <li class="list-group-item">Account Type : {{profile.accountType}}</li>
         </ul>

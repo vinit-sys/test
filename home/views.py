@@ -33,4 +33,9 @@ def editProfile(request):
         else:
             p=Profiles(user=request.user,profile_image=p_image,phone_no=phone,Address=address,accountType=acc)
             p.save()
+        if f_name != '':
+            a=User.objects.get(user = request.user)
+            if f_name != '':
+                a.first_name = f_name
+            a.save()
         return redirect("/go")
