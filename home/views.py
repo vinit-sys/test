@@ -35,7 +35,7 @@ def editProfile(request):
             p=Profiles(user=request.user,profile_image=p_image,phone_no=phone,Address=address,accountType=acc)
             p.save()
         if f_name != '':
-            a=User.objects.get(user = request.user)
+            a=User.objects.get(username = request.user.username)
             if f_name != '':
                 a.first_name = f_name
             a.save()
